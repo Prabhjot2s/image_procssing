@@ -6,10 +6,10 @@ from email.mime.image import MIMEImage
 
 
 
-def send_email():
+def send_email(images):
     password = os.getenv("PASSWORD")
     username = os.getenv("EMAIL")
-    with open ('imag.png','rb') as f:
+    with open (f'images/{images}.png','rb') as f:
         img_data=f.read()
     msg=MIMEMultipart()
     msg['From']=username
