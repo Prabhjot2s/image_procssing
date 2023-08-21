@@ -1,6 +1,6 @@
 import cv2
 import time
-
+from emailing import send_email
 Video=cv2.VideoCapture(0)
 time.sleep(1)
 first_frame=None
@@ -39,3 +39,4 @@ while True:
 
 Video.release()
 cv2.imwrite('imag.png',second_frame)
+send_email()
